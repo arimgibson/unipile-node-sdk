@@ -1,5 +1,4 @@
-import { FormData } from 'formdata-node';
-import { Blob } from 'node-fetch';
+import { Blob, FormData } from 'node-fetch';
 
 import {
   GetAllEmailsInput,
@@ -328,9 +327,7 @@ export class EmailResource {
       path: ['emails'],
       method: 'POST',
       body: formDataBody,
-      headers: {
-        // @todo find why adding the "Content-Type: multipart/form-data" header make the request fail
-      },
+      headers: {},
       options,
       validator: MailSentApiResponseValidator,
     });

@@ -173,9 +173,7 @@ export class UsersResource {
       path: ['posts'],
       method: 'POST',
       body,
-      headers: {
-        // @todo find why adding the "Content-Type: multipart/form-data" header make the request fail
-      },
+      headers: {},
       options,
       validator: CreatePostResponseValidator,
     });

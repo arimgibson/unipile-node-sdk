@@ -15,8 +15,7 @@ import {
   isLinkedinClassicPostNewChatInputOptions,
   isLinkedinRecruiterPostNewChatInputOptions,
 } from '../index.js';
-import { FormData } from 'formdata-node';
-import { Blob } from 'node-fetch';
+import { Blob, FormData } from 'node-fetch';
 import { ChatListApiResponse, ChatListApiResponseValidator } from '../messaging/chats/chats-list.types.js';
 import { ChatResponse, ChatResponseValidator } from '../messaging/chats/chat.types.js';
 import { MessageListApiResponse, MessageListApiResponseValidator } from '../messaging/messages/message-list.types.js';
@@ -110,9 +109,7 @@ export class MessagingResource {
       path: ['chats', chat_id, 'messages'],
       method: 'POST',
       body,
-      headers: {
-        // @todo find why adding the "Content-Type: multipart/form-data" header make the request fail
-      },
+      headers: {},
       options,
       validator: MessageSentResponseValidator,
     });
@@ -174,9 +171,7 @@ export class MessagingResource {
       path: ['chats'],
       method: 'POST',
       body,
-      headers: {
-        // @todo find why adding the "Content-Type: multipart/form-data" header make the request fail
-      },
+      headers: {},
       options,
       validator: ChatStartedApiResponseValidator,
     });
