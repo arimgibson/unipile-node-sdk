@@ -1,5 +1,3 @@
-import { Blob, FormData } from 'node-fetch';
-
 import {
   GetAllEmailsInput,
   GetAllFoldersInput,

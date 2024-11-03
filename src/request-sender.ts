@@ -3,7 +3,6 @@ import { TypeCheck } from '@sinclair/typebox/compiler';
 import { DefaultHeaders, RequestInput, RequestUrl } from './types/request.js';
 import { ValidatorMissingError, UnsuccessfulRequestError, InvalidResponseTypeError } from './errors/index.js';
 import { ClientState } from './state.js';
-import fetch from 'node-fetch';
 import { ClientOptions } from './types/client.js';
 
 export class RequestSender {

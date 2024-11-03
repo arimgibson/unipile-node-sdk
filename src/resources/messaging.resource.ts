@@ -15,7 +15,6 @@ import {
   isLinkedinClassicPostNewChatInputOptions,
   isLinkedinRecruiterPostNewChatInputOptions,
 } from '../index.js';
-import { Blob, FormData } from 'node-fetch';
 import { ChatListApiResponse, ChatListApiResponseValidator } from '../messaging/chats/chats-list.types.js';
 import { ChatResponse, ChatResponseValidator } from '../messaging/chats/chat.types.js';
 import { MessageListApiResponse, MessageListApiResponseValidator } from '../messaging/messages/message-list.types.js';
