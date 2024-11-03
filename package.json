@@ -5,8 +5,16 @@
   "author": "Unipile",
   "license": "ISC",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -18,7 +26,11 @@
     "test-e2e": "jest --verbose --config ./jest.config.js",
     "test-e2e-watch": "jest --verbose --config ./jest.config.js  --watch",
     "test-watch": "jest --verbose --config ./jest.config.js  --watch",
-    "prepublishOnly": "tsc",
+    "clean": "rimraf dist",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "prepublishOnly": "npm run build",
     "postversion": "git push origin"
   },
   "devDependencies": {
@@ -34,7 +46,8 @@
     "jest-fetch-mock": "^3.0.3",
     "prettier": "^3.0.3",
     "ts-jest": "^29.2.4",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "rimraf": "^5.0.1"
   },
   "dependencies": {
     "@sinclair/typebox": "^0.31.8",
