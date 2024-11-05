@@ -23,7 +23,7 @@ const config = {
   moduleNameMapper: {
     '^(.+)\\.js$': '$1',
   },
-  setupFilesAfterEnv: ['./jest.setup.js'],
+//   setupFilesAfterEnv: ['./jest.setup.js'],
 };
 
-export default config;
+module.exports = config;

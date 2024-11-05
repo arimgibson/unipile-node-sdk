@@ -2,7 +2,7 @@
   "name": "unipile-node-sdk-with-cjs",
   "version": "1.8.3",
   "description": "Unipile node SDK",
-  "author": "Ari Gibson",
+  "author": "Unipile",
   "license": "ISC",
   "type": "commonjs",
   "exports": {
@@ -58,7 +58,6 @@
   "dependencies": {
     "@sinclair/typebox": "^0.31.8",
     "@types/qrcode": "^1.5.2",
-    "formdata-node": "^6.0.3",
     "qrcode": "^1.5.3"
   }
 }
