@@ -1,4 +1,7 @@
-# Messaging (LinkedIn API, WhatsApp API,etc.) & Email API by Unipile
+## Fork Note
+This package is developed and maintained fully by Unipile[https://unipile.com]. Their package didn't have a CJS build, so I added one. All credit to them.
+
+# CJS Support -- Messaging (LinkedIn API, WhatsApp API,etc.) & Email API by Unipile
 
 The Unipile Node.js SDK provides powerful tools to easily integrate with LinkedIn's API, Email API, and other platforms like WhatsApp, Telegram and Instagram. With this SDK, you can seamlessly manage your LinkedIn connections, send messages (including InMail), retrieve profiles, handle invitations, and manage email communications—all using LinkedIn's API and the Email API. Whether you're automating LinkedIn tasks, building scalable messaging solutions across multiple platforms, or managing emails efficiently, Unipile makes it simple and effective.
 
