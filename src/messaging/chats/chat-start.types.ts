@@ -146,6 +146,9 @@ export const ChatStartedApiResponseSchema = Type.Object({
   chat_id: Type.Union([Type.String(), Type.Null()], {
     description: "The Unipile ID of the newly started chat.",
   }),
+  message_id: Type.Union([Type.String(), Type.Null()], {
+    description: "The Unipile ID of the message the chat started with.",
+  }),
 });
 
 export type ChatStartedApiResponse = Static<
